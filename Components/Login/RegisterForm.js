@@ -42,13 +42,13 @@ function RegisterForm(props) {
             photoURL: "https://example.com/jane-q-user/profile.jpg",
           })
           .then(function () {
-             navigation.replace('Home')
           })
           .catch(function (error) {
             // An error happened.
             alert(error)
           });
-        // ...
+          // ...
+          navigation.popToTop();
       })
       .catch((error) => {
         var errorMessage = error.message;

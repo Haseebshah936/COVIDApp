@@ -6,10 +6,11 @@ import DrawerNavigator from './Components/Navigator/DrawerNavigator'
 import LoginNavigator from './Components/Navigator/LoginNavigator'
 import LoginForm from './Components/Login/LoginForm';
 import RegisterForm from './Components/Login/RegisterForm';
-
+import { LogBox } from 'react-native';
 
 
 export default function App() {
+  LogBox.ignoreLogs(['Setting a timer']);
   return (
 
     

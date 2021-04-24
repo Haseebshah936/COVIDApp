@@ -44,18 +44,18 @@ function LoginForm({navigation}) {
   });
   }
 
-  // useEffect(()=>{
-  //   const unsub = auth.onAuthStateChanged
-  //   (user => {
-  //     if (user) {
-  //       // User is signed in.
-  //       navigation.replace('Home');
-  //     } else {
-  //       // No user is signed in.
-  //     }
-  //   });
-  //   return unsub;
-  // }, [])
+  useEffect(()=>{
+    const unsub = auth.onAuthStateChanged
+    (user => {
+      if (user) {
+        // User is signed in.
+        navigation.replace('Home');
+      } else {
+        // No user is signed in.
+      }
+    });
+    return unsub;
+  }, [])
 
       
   return (
